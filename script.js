@@ -9,3 +9,10 @@ function getComputerChoice(){
 }
 
 console.log(getComputerChoice())
+
+function getHumanChoice(str){
+    if(str==="paper"||str==="rock"||str==="scissors")
+    return str
+}
+
+console.log(getHumanChoice(prompt("What do you choose?")))
