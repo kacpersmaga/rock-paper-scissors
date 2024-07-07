@@ -80,8 +80,23 @@ function playRound(humanChoice, computerChoice){
             textResult.style.color = "#bf7070"
         } 
 
+        if(humanScore===5){
+            textResult.textContent = ("You won whole game. Congratulations! ")
+            textResult.style.color = "#00ff39"
+        }  
+
+        if(computerScore===5){
+            textResult.textContent = ("You lost whole game. Don't worry! ")
+            textResult.style.color = "red"
+        }  
+
         document.querySelector(".human").textContent = "Your score: " + humanScore
         document.querySelector(".computer").textContent = "Computer score: " + computerScore
+
+        if(humanScore===5||computerScore===5){
+            humanScore=0;
+            computerScore=0;
+        }
 }
 let rockButton = document.querySelector("#rock-btn");
 rockButton.addEventListener("click", () => playRound("rock", getComputerChoice()));

@@ -1,9 +1,12 @@
 * {
-  background-color: cornsilk;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: cornsilk;
 }
 
 main {
@@ -11,26 +14,22 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
 }
 
 .buttons button {
-  padding: 20px 40px;
-  font-size: 20px;
-  font-weight: 400;
-  background-color: #c5a26b;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 18px;
 }
 
 .buttons button:hover {
@@ -41,19 +40,25 @@ main {
   background-color: #d35400;
 }
 
+.results {
+  margin-top: 20px;
+  text-align: center;
+}
+
 #textResult {
-  padding: 45px 45px 40px;
-  font-size: 50px;
+  padding: 30px;
+  font-size: 36px;
   font-weight: 700;
   text-align: center;
 }
 
 .scores {
   display: flex;
-  justify-content: space-around;
-  width: 100vh;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .score {
-  font-size: 20px;
+  font-size: 18px;
+  margin: 0 10px;
 }
