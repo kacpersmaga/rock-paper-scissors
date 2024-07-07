@@ -71,6 +71,9 @@ function playRound(humanChoice, computerChoice){
             computerScore+=1
             textResult.textContent = ("You lost. Rock beats scissors ")
         } 
+
+        document.querySelector("#humanScore").textContent = "Your score: " + humanScore
+        document.querySelector("#computerScore").textContent = "Computer score: " + computerScore
 }
 let rockButton = document.querySelector("#rock-btn");
 rockButton.addEventListener("click", () => playRound("rock", getComputerChoice()));
