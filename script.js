@@ -70,29 +70,9 @@ function playRound(humanChoice, computerChoice){
             console.log("You lost. Rock beats scissors ")
         } 
 }
+let rockButton = document.querySelector("#rock-btn");
+rockButton.addEventListener("click", () => playRound("rock", getComputerChoice()));
 
+document.querySelector("#paper-btn").addEventListener("click", () => playRound("paper", getComputerChoice()));
 
-
-function playGame(rounds){
-
-
-
-    for(let i=0;i<rounds;i++){
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection,computerSelection);
-    }
-
-    if (humanScore > computerScore) {
-        console.log("You won the game!");
-    } 
-    
-    else if (humanScore < computerScore) {
-        console.log("You lost the game.");
-    } 
-    
-    else {
-        console.log("The game is a draw.");
-    }
-}
-playGame(5)
+document.querySelector("#scissors-btn").addEventListener("click", () => playRound("scissors", getComputerChoice()));
