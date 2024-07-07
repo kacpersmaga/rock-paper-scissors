@@ -39,41 +39,49 @@ function getHumanChoice(){
 function playRound(humanChoice, computerChoice){
     let textResult = document.querySelector("#textResult")
     
-    if(humanChoice===computerChoice)
+    if(humanChoice===computerChoice){
+        textResult.style.color = "#5276adc2"
         textResult.textContent =("It is a draw")
+    }
 
     if(humanChoice==="paper")
         if(computerChoice==="rock"){
             humanScore+=1
             textResult.textContent = ("You won! Paper beats Rock")
+            textResult.style.color = "#509750"
         }
         else if(computerChoice==="scissors"){
             computerScore+=1
             textResult.textContent = ("You lost. Scissors beats paper ")
+            textResult.style.color = "#bf7070"
         }
 
     if(humanChoice==="rock")
         if(computerChoice==="scissors"){
             humanScore+=1
             textResult.textContent = ("You won! Rock beats scissors")
+            textResult.style.color = "#509750"
             }
         else if(computerChoice==="paper"){
             computerScore+=1
             textResult.textContent = ("You lost. Paper beats rock ")
+            textResult.style.color = "#bf7070"
         }
 
     if(humanChoice==="scissors")
         if(computerChoice==="paper"){
             humanScore+=1
             textResult.textContent = ("You won! Scissors beats paper")
+            textResult.style.color = "#509750"
         }
         else if(computerChoice==="rock"){
             computerScore+=1
             textResult.textContent = ("You lost. Rock beats scissors ")
+            textResult.style.color = "#bf7070"
         } 
 
-        document.querySelector("#humanScore").textContent = "Your score: " + humanScore
-        document.querySelector("#computerScore").textContent = "Computer score: " + computerScore
+        document.querySelector(".human").textContent = "Your score: " + humanScore
+        document.querySelector(".computer").textContent = "Computer score: " + computerScore
 }
 let rockButton = document.querySelector("#rock-btn");
 rockButton.addEventListener("click", () => playRound("rock", getComputerChoice()));

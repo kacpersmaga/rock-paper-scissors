@@ -1,0 +1,59 @@
+* {
+  background-color: cornsilk;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.buttons button {
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #c5a26b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #e67e22;
+}
+
+.buttons button:active {
+  background-color: #d35400;
+}
+
+#textResult {
+  padding: 45px 45px 40px;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+  width: 100vh;
+}
+
+.score {
+  font-size: 20px;
+}
